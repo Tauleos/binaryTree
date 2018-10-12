@@ -1,6 +1,8 @@
-var binaryTree = require('./binaryTree')
+'use strict'
 
-var tree = {
+let binaryTree = require('./traverse')
+
+let tree = {
   value: "-",
   left: {
     value: '+',
@@ -29,13 +31,29 @@ var tree = {
 }
 
 let trees = new binaryTree({tree})
+let a
 //先序遍历
-
-//中序遍历
-//后序遍历
+////递归
+//a = trees.dfs_rec_DLR()
+//
+////非递归
+//a = trees.dfs_rec_DLR()
+////中序遍历
+////递归
+//a = trees.dfs_rec_LDR()
+////非递归
+//a = trees.dfs_LDR()
+//
+////后序遍历
+////递归
+//a = trees.dfs_rec_LRD()
+////非递归
+//a = trees.dfs_LRD_1()
+a = trees.dfs_LRD_2()
+console.log(a)
 
 //广度优先
-trees.bfs()
-console.log(trees.results)
+//trees.bfs()
+//console.log(trees.results)
 
 
